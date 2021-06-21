@@ -101,9 +101,9 @@ fn image_to_pixmap(image: &Image, pixmap: &mut [u8]) {
     match &image.data {
         ImageData::RGB(data) => {
             for p in data.as_rgb() {
-                pixmap[i + 0] = p.r;
+                pixmap[i + 0] = p.b;
                 pixmap[i + 1] = p.g;
-                pixmap[i + 2] = p.b;
+                pixmap[i + 2] = p.r;
                 pixmap[i + 3] = 255;
 
                 i += tiny_skia::BYTES_PER_PIXEL;
@@ -111,9 +111,9 @@ fn image_to_pixmap(image: &Image, pixmap: &mut [u8]) {
         }
         ImageData::RGBA(data) => {
             for p in data.as_rgba() {
-                pixmap[i + 0] = p.r;
+                pixmap[i + 0] = p.b;
                 pixmap[i + 1] = p.g;
-                pixmap[i + 2] = p.b;
+                pixmap[i + 2] = p.r;
                 pixmap[i + 3] = p.a;
 
                 i += tiny_skia::BYTES_PER_PIXEL;

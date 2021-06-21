@@ -181,9 +181,9 @@ checksum = "db8bcd96cb740d03149cbad5518db9fd87126a10ab519c011893b1754134c468"
 
 [[package]]
 name = "png"
-version = "0.17.1"
+version = "0.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "641fb192b191c2cb8f35985f47eb1e78cf1d464542f9fe5d1dbc5ee8f989288d"
+checksum = "9c2ea6221e9aa7dccc581e610d92af4621d3589f7faa36ffd420bc52904e4aa9"
 dependencies = [
  "bitflags",
  "crc32fast",
@@ -199,7 +199,7 @@ checksum = "9ae028b272a6e99d9f8260ceefa3caa09300a8d6c8d2b2001316474bc52122e9"
 
 [[package]]
 name = "resvg"
-version = "0.20.0"
+version = "2.15.0"
 dependencies = [
  "jpeg-decoder",
  "log",
@@ -211,11 +211,12 @@ dependencies = [
  "svgtypes",
  "tiny-skia",
  "usvg",
+ "winres",
 ]
 
 [[package]]
 name = "resvg-capi"
-version = "0.20.0"
+version = "2.15.0"
 dependencies = [
  "log",
  "resvg",
@@ -267,6 +268,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde"
+version = "1.0.126"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ec7505abeacaec74ae4778d9d9328fe5a5d04253220a85c4ee022239fc996d03"
+
+[[package]]
 name = "simplecss"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -316,6 +323,15 @@ dependencies = [
  "cfg-if",
  "png",
  "safe_arch",
+]
+
+[[package]]
+name = "toml"
+version = "0.5.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a31142970826733df8241ef35dc040ef98c679ab14d7c3e54d827099b3acecaa"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
@@ -383,6 +399,15 @@ dependencies = [
  "unicode-script",
  "unicode-vo",
  "xmlwriter",
+]
+
+[[package]]
+name = "winres"
+version = "0.1.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ff4fb510bbfe5b8992ff15f77a2e6fe6cf062878f0eda00c0f44963a807ca5dc"
+dependencies = [
+ "toml",
 ]
 
 [[package]]
