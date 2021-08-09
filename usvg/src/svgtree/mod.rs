@@ -4,7 +4,8 @@
 
 #![allow(missing_debug_implementations)]
 
-use std::collections::HashMap;
+//use std::collections::HashMap;
+use fnv::FnvHashMap;
 
 use crate::geom::{Rect, Transform, FuzzyEq};
 use crate::{converter, units};
@@ -23,7 +24,7 @@ type Range = std::ops::Range<usize>;
 pub struct Document {
     nodes: Vec<NodeData>,
     attrs: Vec<Attribute>,
-    links: HashMap<String, NodeId>,
+    links: FnvHashMap<String, NodeId>,
 }
 
 impl Document {

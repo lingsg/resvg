@@ -2,8 +2,9 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-use std::collections::HashSet;
+//use std::collections::HashSet;
 use std::hash::{Hash, Hasher};
+use fnv::FnvHashSet;
 
 use svgtypes::{Length, LengthUnit as Unit};
 
@@ -21,14 +22,14 @@ pub struct State<'a> {
 }
 
 pub struct NodeIdGenerator {
-    all_ids: HashSet<u64>,
+    all_ids: FnvHashSet<u64>,
     clip_path_index: usize,
     #[allow(dead_code)] filter_index: usize,
 }
 
 impl NodeIdGenerator {
     fn new(doc: &svgtree::Document) -> Self {
-        let mut all_ids = HashSet::new();
+        let mut all_ids = FnvHashSet::default();
         for node in doc.descendants() {
             if node.has_element_id() {
                 all_ids.insert(string_hash(node.element_id()));

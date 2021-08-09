@@ -4,7 +4,8 @@
 
 use std::rc::Rc;
 use std::str::FromStr;
-use std::collections::HashMap;
+//use std::collections::HashMap;
+use fnv::FnvHashMap;
 
 use crate::{Rect, Error, EnableBackground};
 use super::{Document, Attribute, AId, EId, Node, NodeId, NodeKind, NodeData, AttributeValue};
@@ -69,7 +70,7 @@ fn parse(xml: &roxmltree::Document) -> Result<Document, Error> {
     let mut doc = Document {
         nodes: Vec::new(),
         attrs: Vec::new(),
-        links: HashMap::new(),
+        links: FnvHashMap::default(),
     };
 
     // Add a root node.
@@ -96,7 +97,7 @@ fn parse(xml: &roxmltree::Document) -> Result<Document, Error> {
     }
 
     // Collect all elements with `id` attribute.
-    let mut links = HashMap::new();
+    let mut links = FnvHashMap::default();
     for node in doc.descendants() {
         if let Some(id) = node.attribute::<&str>(AId::Id) {
             links.insert(id.to_string(), node.id);
