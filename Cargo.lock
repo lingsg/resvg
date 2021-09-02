@@ -205,7 +205,7 @@ checksum = "9ae028b272a6e99d9f8260ceefa3caa09300a8d6c8d2b2001316474bc52122e9"
 
 [[package]]
 name = "resvg"
-version = "2.15.0"
+version = "2.16.0"
 dependencies = [
  "jpeg-decoder",
  "log",
@@ -222,7 +222,7 @@ dependencies = [
 
 [[package]]
 name = "resvg-capi"
-version = "2.15.0"
+version = "2.16.0"
 dependencies = [
  "log",
  "resvg",
@@ -320,8 +320,6 @@ dependencies = [
 [[package]]
 name = "tiny-skia"
 version = "0.6.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1657db71220a7b20cc51aa6a8a0e14961cff9decb3d99b5415fbd34ca0a21cdc"
 dependencies = [
  "arrayref",
  "arrayvec",

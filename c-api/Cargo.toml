@@ -10,13 +10,13 @@ workspace = ".."
 [lib]
 name = "resvg"
 path = "lib.rs"
-crate-type = ["cdylib", "staticlib"]
+crate-type = ["cdylib"]
 
 [dependencies]
 log = "0.4"
 resvg = { path = "../", default-features = false }
 usvg = { path = "../usvg", default-features = false }
-tiny-skia = "0.6.1"
+tiny-skia = { path = "../../tiny-skia" }
 
 [features]
 # we do not provide the dump-svg/export feature here, because it's not available to C API anyway

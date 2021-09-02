@@ -23,9 +23,7 @@ log = "0.4"
 pico-args = "0.4"
 png = "0.17"
 rgb = "0.8"
-svgfilters = { path = "svgfilters", version = "0.4"}£¬ optional = true }
-svgtypes = "0.8"
-tiny-skia = "0.6.1"
+svgfilters = { path = "svgfilters", version = "0.4", optional = true }
 tiny-skia = { path = "../tiny-skia" }
 usvg = { path = "usvg", version = "0.20.0", default-features = false }
 
@@ -50,7 +48,7 @@ winres = "0.1"
 
 [package.metadata.winres]
 OriginalFilename = "WUL.Svg.dll"
-LegalCopyright = "Copyright Â© 2021 Wondershare, All rights reserved."
+LegalCopyright = "Copyright ? 2021 Wondershare, All rights reserved."
 FileDescription = "WUL Svg Library"
 ProductVersion = "2.7.0"
 ProductName = "WUL"
