@@ -59,7 +59,7 @@ winres = "0.1"
 
 [package.metadata.winres]
 OriginalFilename = "WUL.Svg.dll"
-LegalCopyright = "Copyright ? 2021 Wondershare, All rights reserved."
+LegalCopyright = "Copyright © 2022 Wondershare, All rights reserved."
 FileDescription = "WUL Svg Library"
 ProductVersion = "2.7.0"
 ProductName = "WUL"
